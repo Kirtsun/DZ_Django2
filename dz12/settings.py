@@ -38,10 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'annotate_aggregate',
+    'django_extensions',
 
-    "django.contrib.staticfiles",
     "debug_toolbar",
+
+    'annotate_aggregate',
 ]
 
 MIDDLEWARE = [
