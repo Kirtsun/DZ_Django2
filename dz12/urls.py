@@ -19,4 +19,5 @@ from django.urls import include,path
 urlpatterns = [
     path('annotate_aggregate/', include('annotate_aggregate.urls')),
     path('admin/', admin.site.urls),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]
