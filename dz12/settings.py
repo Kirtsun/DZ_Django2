@@ -40,10 +40,11 @@ INSTALLED_APPS = [
 
     'django_extensions',
 
-    "debug_toolbar",
-
     'annotate_aggregate',
+
+    "debug_toolbar",
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -5,9 +5,15 @@ class Author(models.Model):
     name = models.CharField(max_length=100)
     age = models.IntegerField()
 
+    def __str__(self):
+        return f"Name {self.name} Age: {self.age}"
+
 
 class Publisher(models.Model):
     name = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.name
 
 
 class Book(models.Model):
@@ -17,9 +23,15 @@ class Book(models.Model):
     rating = models.FloatField()
     authors = models.ManyToManyField(Author)
     publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
-    pubdate = models.DateField()
+    pubdate = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name}, {self.pages}, {self.price}, {self.pubdate}, {self.rating}, {self.publisher}"
 
 
 class Store(models.Model):
     name = models.CharField(max_length=300)
     books = models.ManyToManyField(Book)
+
+    def __str__(self):
+        return self.name
