@@ -23,7 +23,7 @@ class Book(models.Model):
     rating = models.FloatField()
     authors = models.ManyToManyField(Author)
     publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
-    pubdate = models.DateField(auto_now_add=True)
+    pubdate = models.DateField()
 
     def __str__(self):
         return f"{self.name}, {self.pages}, {self.price}, {self.pubdate}, {self.rating}, {self.publisher}"

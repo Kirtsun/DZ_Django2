@@ -15,9 +15,7 @@ class Command(BaseCommand):
 )
 
     def handle(self, *args, **kwargs):
-        if Store.objects.all().count() or Book.objects.all().count() == 0:
-            self.stdout.write('The base is empty! Fill the base with the "createss" command!!')
-        else:
+        if Store.objects.all().count() or Book.objects.all().count():
             for i in Store.objects.values_list('id', flat=True):
                 q = Store.objects.get(pk=i)
                 w = Book.objects.all().count()
@@ -27,3 +25,5 @@ class Command(BaseCommand):
                 w = Author.objects.all().count()
                 q.authors.add(fake.pyint(min_value=1, max_value=w))
             self.stdout.write('Connections create with success!')
+        else:
+            self.stdout.write('The base is empty! Fill the base with the "createss" command!!')
