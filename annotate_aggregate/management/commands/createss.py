@@ -36,6 +36,7 @@ class Command(BaseCommand):
         Author.objects.bulk_create(objs_author)
         Publisher.objects.bulk_create(objs_publisher)
         Store.objects.bulk_create(objs_store)
+        q = Publisher.objects.values_list('id', flat=True)
         for b in range(total):
             k_book = Book(
                 name=fake.job(),
@@ -43,7 +44,7 @@ class Command(BaseCommand):
                 price=fake.pyfloat(right_digits=2, min_value=1, max_value=10),
                 rating=fake.pyfloat(right_digits=1, min_value=1, max_value=10),
                 pubdate=fake.date(),
-                publisher_id=random.choice(Publisher.objects.values_list('id', flat=True))
+                publisher_id=random.choice(q)
             )
             objs_book.append(k_book)
         Book.objects.bulk_create(objs_book)
