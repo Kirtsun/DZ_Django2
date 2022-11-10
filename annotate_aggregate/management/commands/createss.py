@@ -14,13 +14,6 @@ class Command(BaseCommand):
         parser.add_argument('some_id', nargs='?', type=int, choices=range(1, 21), help='Enter a number from 1 to 10')
 
     def handle(self, *args, **kwargs):
-        book_list = ["Harry Potter and the Philosopher's Stone", "Harry Potter and the Chamber of Secrets",
-                     "Harry Potter and the Prisoner of Azkaban", "Lord of the Rings",
-                     "Harry Potter and the Goblet of Fire", "Harry Potter and the Order of the Phoenix",
-                     "Harry Potter and the Half-Blood Prince", "Harry Potter and the Deathly Hallows",
-                     "The Hobbit", "It", "Doctor sleep", "Gulliver's Travels", "Nightmare Abbey", "Stormy Pass",
-                     "Scarlet letter", "Alice's Adventures in Wonderland", "Moonstone", "Stolen",
-                     "Portrait of Dorian Gray", "Dracula"]
         objs_author = []
         objs_publisher = []
         objs_book = []
@@ -45,7 +38,7 @@ class Command(BaseCommand):
         Store.objects.bulk_create(objs_store)
         for b in range(total):
             k_book = Book(
-                name=fake.name(),
+                name=fake.job(),
                 pages=fake.pyint(min_value=200, max_value=600),
                 price=fake.pyfloat(right_digits=2, min_value=1, max_value=10),
                 rating=fake.pyfloat(right_digits=1, min_value=1, max_value=10),
