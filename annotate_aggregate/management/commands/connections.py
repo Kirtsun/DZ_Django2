@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from annotate_aggregate.models import Author, Store, Publisher, Book
+from annotate_aggregate.models import Author, Store, Book
 
 from faker import Faker
 
@@ -15,7 +15,7 @@ class Command(BaseCommand):
 )
 
     def handle(self, *args, **kwargs):
-        if Store.objects.all().count() or Book.objects.all().count():
+        if Store.objects.all().count() and Book.objects.all().count():
             for i in Store.objects.values_list('id', flat=True):
                 q = Store.objects.get(pk=i)
                 w = Book.objects.all().count()
