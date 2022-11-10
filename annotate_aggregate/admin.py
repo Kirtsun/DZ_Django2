@@ -36,10 +36,10 @@ class BookAdmin(admin.ModelAdmin):
         ('Info', {'fields': ['pages', 'price', 'rating', 'pubdate']}),
     ]
     list_display_links = ('name', 'pages',)
-    list_filter = ['name', 'price']
+    list_filter = ['rating', 'price']
     search_fields = ['name']
     date_hierarchy = 'pubdate'
-    list_per_page = 10
+    list_per_page = 20
     save_as = True
     inlines = [BookInLineStore, BookInLineAuthor]
 
@@ -61,3 +61,7 @@ class StoreAdmin(admin.ModelAdmin):
     list_filter = ['name']
     search_fields = ['name']
     save_as = True
+    inlines = [BookInLineStore]
+    fieldsets = [
+        (None, {'fields': ['name']}),
+        ]
