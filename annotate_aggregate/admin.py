@@ -65,6 +65,8 @@ class StoreAdmin(admin.ModelAdmin):
     search_fields = ['name']
     save_as = True
     inlines = [BookInLineStore]
+    filter_vertical = ['books']
     fieldsets = [
         (None, {'fields': ['name']}),
+        ('Info', {'fields': ['books']})
         ]
