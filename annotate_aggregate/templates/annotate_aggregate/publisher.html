@@ -5,22 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-{% if books %}
+{% if publish %}
     <ul>
-    {% for b in books %}
-        <h1> {{ b.name }}</h1>
-        <p>pages - {{b.pages}} </p>
-        <p>price - {{ b.price }}</p>
-        <p>rating - {{ b.rating }}</p>
-        <p>pubdate - {{ b.pubdate }}</p>
-        <li><a href="{% url 'annotate_aggregate:publisher' b.id %}">Publisher - {{ b.name }}</a></li>
-        {% for p in b.authors.all %}
-            <li><a href="{% url 'annotate_aggregate:book' p.id %}">Author - {{ p.name }}</a></li>
-        {% endfor %}
+    {% for b in publish %}
+        <h1>{{b.publisher.name}}</h1>
+    {% endfor %}
+    {% for i in publish %}
+        <li><a href="{% url 'annotate_aggregate:book' i.id %}">Book - {{ i.name }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
-    <p>No book are available.</p>
+    <p>No publisher are available.</p>
 {% endif %}
 </body>
 </html>

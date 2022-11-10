@@ -13,7 +13,7 @@
         <p>price - {{ b.price }}</p>
         <p>rating - {{ b.rating }}</p>
         <p>pubdate - {{ b.pubdate }}</p>
-        <li><a href="{% url 'annotate_aggregate:publisher' b.id %}">Publisher - {{ b.name }}</a></li>
+        <li><a href="{% url 'annotate_aggregate:publisher' b.publisher.id %}">Publisher - {{ b.publisher.name }}</a></li>
         {% for p in b.authors.all %}
             <li><a href="{% url 'annotate_aggregate:book' p.id %}">Author - {{ p.name }}</a></li>
         {% endfor %}

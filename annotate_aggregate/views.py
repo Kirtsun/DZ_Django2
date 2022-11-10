@@ -19,5 +19,9 @@ def book(request, pk):
 
 
 def publisher(request, pk):
-    publish = Book.objects.select_related('publisher').filter(pk=pk)
-    return render(request, 'annotate_aggregate/publisher.html')
+    publish = Book.objects.select_related('publisher').filter(publisher__id=pk)
+    return render(request, 'annotate_aggregate/publisher.html', {'publish': publish})
+
+
+def author(request, pk):
+    authorr =
