@@ -21,6 +21,8 @@ class BookInLineStore(admin.TabularInline):
 @admin.register(Publisher)
 class PublisherAdmin(admin.ModelAdmin):
     list_display = ("name",)
+    fieldsets = [
+        (None, {'fields': ['name']}),]
     inlines = [BookInLine]
     list_display_links = ('name', )
     list_filter = ['name']
@@ -33,8 +35,9 @@ class BookAdmin(admin.ModelAdmin):
     list_display = ("name", "pages", "price", "rating", "pubdate",)
     fieldsets = [
         (None, {'fields': ['name']}),
-        ('Info', {'fields': ['pages', 'price', 'rating', 'pubdate']}),
+        ('Info', {'fields': ['pages', 'price', 'rating', 'pubdate', 'authors']}),
     ]
+    filter_vertical = ['authors']
     list_display_links = ('name', 'pages',)
     list_filter = ['rating', 'price']
     search_fields = ['name']
