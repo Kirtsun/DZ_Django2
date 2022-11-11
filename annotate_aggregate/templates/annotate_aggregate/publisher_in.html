@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Publisher info</title>
+</head>
+<body>
+<li><a href="{% url 'annotate_aggregate:publisher'%}">Back to all Books </a></li>
+<li><a href="{% url 'annotate_aggregate:book'%}">To all Books </a></li>
+<li><a href="{% url 'annotate_aggregate:authors'%}">To all Authors </a></li>
+<li><a href="{% url 'annotate_aggregate:store'%}">To all Store </a></li>
+{% if books %}
+    <ul>
+      <h2>Publisher name:</h2>
+        <h3><p>{{ pub.name }}</p></h3>
+        <p>Books: </p>
+      {% for i in books %}
+        <li><p><a href="{% url 'annotate_aggregate:book_in' i.id %}"> {{ i.name }}</a></p></li>
+        <p>Rating - {{i.rating}}</p>
+      {% endfor %}
+    </ul>
+{% else %}
+  <p>No book in publisher are available</p>
+{% endif %}
+</body>
+</html>

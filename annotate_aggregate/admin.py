@@ -22,7 +22,7 @@ class BookInLineStore(admin.TabularInline):
 class PublisherAdmin(admin.ModelAdmin):
     list_display = ("name",)
     fieldsets = [
-        (None, {'fields': ['name']}),]
+        (None, {'fields': ['name']})]
     inlines = [BookInLine]
     list_display_links = ('name', )
     list_filter = ['name']
