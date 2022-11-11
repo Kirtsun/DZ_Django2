@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if books %}
+    <ul>
+      <h2>Publisher name:</h2>
+        <h3><p>{{ pub.name }}</p></h3>
+        <p>Books: </p>
+      {% for i in books %}
+        <li><p><a href="{% url 'annotate_aggregate:book_in' i.id %}"> {{ i.name }}</a></p></li>
+        <p>Rating - {{i.rating}}</p>
+      {% endfor %}
+    </ul>
+{% else %}
+  <p>No book in publisher are available</p>
+{% endif %}
+</body>
+</html>

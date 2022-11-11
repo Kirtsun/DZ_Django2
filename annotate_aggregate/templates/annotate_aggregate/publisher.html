@@ -9,7 +9,7 @@
     <ul>
       <h2>Publisher name:</h2>
       {% for i in pub %}
-        <li><p><a href="{% url 'annotate_aggregate:authors_in' i.id %}"> {{ i.name }}</a></p></li>
+        <li><p><a href="{% url 'annotate_aggregate:publisher_in' i.id %}"> {{ i.name }}</a></p></li>
         <p>Number of published books: {{ i.a }}</p>
       {% endfor %}
     </ul>

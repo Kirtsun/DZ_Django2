@@ -40,4 +40,7 @@ def publisher(request):
     return render(request, 'annotate_aggregate/publisher.html', {'pub': pub})
 
 
-
+def publisher_in(request, pk):
+    pub = get_object_or_404(Publisher, pk=pk)
+    books = pub.book_set.all()
+    return render(request, 'annotate_aggregate/publisher_in.html', {'books': books, 'pub': pub})
