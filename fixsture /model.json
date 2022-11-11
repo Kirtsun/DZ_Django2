@@ -1,0 +1,1481 @@
+[
+{
+  "model": "annotate_aggregate.author",
+  "pk": 1,
+  "fields": {
+    "name": "William Miller",
+    "age": 79
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 2,
+  "fields": {
+    "name": "Suzanne Graves",
+    "age": 43
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 3,
+  "fields": {
+    "name": "Kelly Barrett",
+    "age": 64
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 4,
+  "fields": {
+    "name": "Tommy Hernandez",
+    "age": 52
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 5,
+  "fields": {
+    "name": "Alex Atkins",
+    "age": 71
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 6,
+  "fields": {
+    "name": "Cheryl Butler",
+    "age": 54
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 7,
+  "fields": {
+    "name": "Dawn Morales",
+    "age": 73
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 8,
+  "fields": {
+    "name": "Devon Page",
+    "age": 37
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 9,
+  "fields": {
+    "name": "Daniel Martinez",
+    "age": 64
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 10,
+  "fields": {
+    "name": "Gilbert Nash",
+    "age": 46
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 11,
+  "fields": {
+    "name": "Cody Mejia",
+    "age": 47
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 12,
+  "fields": {
+    "name": "John Long",
+    "age": 64
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 13,
+  "fields": {
+    "name": "Richard Gonzalez",
+    "age": 40
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 14,
+  "fields": {
+    "name": "Lisa Williams",
+    "age": 57
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 15,
+  "fields": {
+    "name": "Jared Reyes",
+    "age": 52
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 16,
+  "fields": {
+    "name": "Kevin Daniels",
+    "age": 50
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 17,
+  "fields": {
+    "name": "Jason Cobb",
+    "age": 56
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 18,
+  "fields": {
+    "name": "Thomas Brown",
+    "age": 78
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 19,
+  "fields": {
+    "name": "Mallory Cole",
+    "age": 48
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 20,
+  "fields": {
+    "name": "Gregory Rose",
+    "age": 74
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 21,
+  "fields": {
+    "name": "Denise Benson",
+    "age": 35
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 22,
+  "fields": {
+    "name": "James Boyd",
+    "age": 35
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 23,
+  "fields": {
+    "name": "Kathryn Lawson",
+    "age": 61
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 24,
+  "fields": {
+    "name": "Dennis Solomon",
+    "age": 77
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 25,
+  "fields": {
+    "name": "Sean Hernandez",
+    "age": 44
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 26,
+  "fields": {
+    "name": "Justin Adams",
+    "age": 50
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 27,
+  "fields": {
+    "name": "Ronald James",
+    "age": 79
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 28,
+  "fields": {
+    "name": "Eric Beltran",
+    "age": 59
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 29,
+  "fields": {
+    "name": "Anthony Morris",
+    "age": 56
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 30,
+  "fields": {
+    "name": "David King",
+    "age": 72
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 31,
+  "fields": {
+    "name": "Ronald Davis",
+    "age": 47
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 32,
+  "fields": {
+    "name": "Heather Wiley",
+    "age": 45
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 33,
+  "fields": {
+    "name": "Chelsea Gibson",
+    "age": 65
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 34,
+  "fields": {
+    "name": "Andrew Carlson",
+    "age": 40
+  }
+},
+{
+  "model": "annotate_aggregate.author",
+  "pk": 35,
+  "fields": {
+    "name": "Zachary Gray",
+    "age": 46
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 1,
+  "fields": {
+    "name": "Young-Rosales"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 2,
+  "fields": {
+    "name": "Newman Group"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 3,
+  "fields": {
+    "name": "Contreras Ltd"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 4,
+  "fields": {
+    "name": "Patrick Ltd"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 5,
+  "fields": {
+    "name": "Thompson, Walker and Roberts"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 6,
+  "fields": {
+    "name": "Lewis PLC"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 7,
+  "fields": {
+    "name": "Avila, Long and Richards"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 8,
+  "fields": {
+    "name": "King Inc"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 9,
+  "fields": {
+    "name": "Randall, Hall and Lara"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 10,
+  "fields": {
+    "name": "Acosta-Holmes"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 11,
+  "fields": {
+    "name": "Owen-Ross"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 12,
+  "fields": {
+    "name": "Cox Ltd"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 13,
+  "fields": {
+    "name": "Fisher and Sons"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 14,
+  "fields": {
+    "name": "Brown, Wilson and Lewis"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 15,
+  "fields": {
+    "name": "Barnett-Valdez"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 16,
+  "fields": {
+    "name": "Hayes-Cruz"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 17,
+  "fields": {
+    "name": "Levy Inc"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 18,
+  "fields": {
+    "name": "Crosby-Sanders"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 19,
+  "fields": {
+    "name": "Brown LLC"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 20,
+  "fields": {
+    "name": "Coleman Inc"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 21,
+  "fields": {
+    "name": "Morris-Butler"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 22,
+  "fields": {
+    "name": "Scott Inc"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 23,
+  "fields": {
+    "name": "Dennis-Evans"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 24,
+  "fields": {
+    "name": "King Ltd"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 25,
+  "fields": {
+    "name": "Harris-Lynn"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 26,
+  "fields": {
+    "name": "Day Ltd"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 27,
+  "fields": {
+    "name": "Luna, Hernandez and Vega"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 28,
+  "fields": {
+    "name": "Jacobs, Lutz and Villanueva"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 29,
+  "fields": {
+    "name": "Montgomery PLC"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 30,
+  "fields": {
+    "name": "Castro, Moore and Moss"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 31,
+  "fields": {
+    "name": "Thomas-Williams"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 32,
+  "fields": {
+    "name": "Singh-Gonzalez"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 33,
+  "fields": {
+    "name": "Miller, Williams and Cortez"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 34,
+  "fields": {
+    "name": "Scott, Schmidt and Kim"
+  }
+},
+{
+  "model": "annotate_aggregate.publisher",
+  "pk": 35,
+  "fields": {
+    "name": "Franco-Jackson"
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 1,
+  "fields": {
+    "name": "Ana",
+    "pages": 544,
+    "price": "3.81",
+    "rating": 2.1,
+    "publisher": 2,
+    "pubdate": "1989-07-27",
+    "authors": [
+      1,
+      28,
+      29
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 2,
+  "fields": {
+    "name": "Connie",
+    "pages": 162,
+    "price": "6.67",
+    "rating": 1.0,
+    "publisher": 4,
+    "pubdate": "2018-05-02",
+    "authors": [
+      2,
+      12,
+      28
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 3,
+  "fields": {
+    "name": "Aaron",
+    "pages": 235,
+    "price": "6.25",
+    "rating": 1.8,
+    "publisher": 3,
+    "pubdate": "1983-11-12",
+    "authors": [
+      2,
+      9,
+      23
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 4,
+  "fields": {
+    "name": "Heather",
+    "pages": 184,
+    "price": "2.28",
+    "rating": 4.3,
+    "publisher": 4,
+    "pubdate": "1975-07-22",
+    "authors": [
+      4,
+      19,
+      27
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 5,
+  "fields": {
+    "name": "Deborah",
+    "pages": 292,
+    "price": "2.11",
+    "rating": 7.3,
+    "publisher": 1,
+    "pubdate": "1980-06-05",
+    "authors": [
+      2,
+      4,
+      18
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 6,
+  "fields": {
+    "name": "Alec",
+    "pages": 297,
+    "price": "9.82",
+    "rating": 8.1,
+    "publisher": 7,
+    "pubdate": "2014-09-02",
+    "authors": [
+      9,
+      10
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 7,
+  "fields": {
+    "name": "Richard",
+    "pages": 533,
+    "price": "3.46",
+    "rating": 9.3,
+    "publisher": 8,
+    "pubdate": "2018-05-10",
+    "authors": [
+      9,
+      32
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 8,
+  "fields": {
+    "name": "Joshua",
+    "pages": 273,
+    "price": "1.59",
+    "rating": 2.2,
+    "publisher": 15,
+    "pubdate": "2019-06-27",
+    "authors": [
+      8,
+      11
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 9,
+  "fields": {
+    "name": "Robin",
+    "pages": 459,
+    "price": "6.52",
+    "rating": 3.0,
+    "publisher": 4,
+    "pubdate": "1978-06-12",
+    "authors": [
+      28,
+      30
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 10,
+  "fields": {
+    "name": "Melissa",
+    "pages": 448,
+    "price": "5.30",
+    "rating": 4.6,
+    "publisher": 1,
+    "pubdate": "1994-01-03",
+    "authors": [
+      22,
+      25
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 11,
+  "fields": {
+    "name": "Katelyn",
+    "pages": 412,
+    "price": "3.25",
+    "rating": 7.8,
+    "publisher": 7,
+    "pubdate": "1994-07-09",
+    "authors": [
+      22,
+      35
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 12,
+  "fields": {
+    "name": "Jeffrey",
+    "pages": 513,
+    "price": "5.65",
+    "rating": 3.2,
+    "publisher": 11,
+    "pubdate": "2001-09-20",
+    "authors": [
+      2,
+      34
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 13,
+  "fields": {
+    "name": "Larry",
+    "pages": 546,
+    "price": "8.89",
+    "rating": 4.6,
+    "publisher": 1,
+    "pubdate": "1972-01-08",
+    "authors": [
+      21,
+      33
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 14,
+  "fields": {
+    "name": "Lauren",
+    "pages": 235,
+    "price": "6.55",
+    "rating": 4.7,
+    "publisher": 1,
+    "pubdate": "1973-05-10",
+    "authors": [
+      19,
+      31
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 15,
+  "fields": {
+    "name": "Jeanette",
+    "pages": 222,
+    "price": "3.65",
+    "rating": 7.7,
+    "publisher": 10,
+    "pubdate": "2004-08-17",
+    "authors": [
+      7,
+      14
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 16,
+  "fields": {
+    "name": "Megan",
+    "pages": 351,
+    "price": "1.35",
+    "rating": 7.9,
+    "publisher": 17,
+    "pubdate": "1999-08-25",
+    "authors": [
+      32,
+      35
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 17,
+  "fields": {
+    "name": "Christopher",
+    "pages": 403,
+    "price": "8.90",
+    "rating": 4.5,
+    "publisher": 3,
+    "pubdate": "1980-10-30",
+    "authors": [
+      13,
+      28
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 18,
+  "fields": {
+    "name": "Elizabeth",
+    "pages": 237,
+    "price": "1.33",
+    "rating": 3.5,
+    "publisher": 22,
+    "pubdate": "1981-01-22",
+    "authors": [
+      5,
+      20
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 19,
+  "fields": {
+    "name": "Danny",
+    "pages": 275,
+    "price": "7.89",
+    "rating": 6.9,
+    "publisher": 21,
+    "pubdate": "2017-11-18",
+    "authors": [
+      8,
+      10
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 20,
+  "fields": {
+    "name": "Margaret",
+    "pages": 349,
+    "price": "2.90",
+    "rating": 8.5,
+    "publisher": 25,
+    "pubdate": "1982-11-19",
+    "authors": [
+      23,
+      29
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 21,
+  "fields": {
+    "name": "Lindsay",
+    "pages": 430,
+    "price": "7.54",
+    "rating": 5.4,
+    "publisher": 17,
+    "pubdate": "2009-03-16",
+    "authors": [
+      19,
+      28
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 22,
+  "fields": {
+    "name": "James",
+    "pages": 262,
+    "price": "9.11",
+    "rating": 7.6,
+    "publisher": 23,
+    "pubdate": "2021-03-26",
+    "authors": [
+      14,
+      32
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 23,
+  "fields": {
+    "name": "Michelle",
+    "pages": 433,
+    "price": "8.17",
+    "rating": 6.2,
+    "publisher": 10,
+    "pubdate": "2005-05-08",
+    "authors": [
+      9,
+      24
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 24,
+  "fields": {
+    "name": "Pamela",
+    "pages": 499,
+    "price": "5.81",
+    "rating": 6.6,
+    "publisher": 22,
+    "pubdate": "1983-07-05",
+    "authors": [
+      27,
+      28
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 25,
+  "fields": {
+    "name": "Marc",
+    "pages": 465,
+    "price": "9.48",
+    "rating": 3.1,
+    "publisher": 18,
+    "pubdate": "2009-04-01",
+    "authors": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 26,
+  "fields": {
+    "name": "Jennifer",
+    "pages": 544,
+    "price": "4.58",
+    "rating": 2.9,
+    "publisher": 15,
+    "pubdate": "1987-12-14",
+    "authors": [
+      30,
+      31
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 27,
+  "fields": {
+    "name": "Pamela",
+    "pages": 359,
+    "price": "3.32",
+    "rating": 8.5,
+    "publisher": 31,
+    "pubdate": "1984-10-21",
+    "authors": [
+      13,
+      25
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 28,
+  "fields": {
+    "name": "Jonathan",
+    "pages": 224,
+    "price": "7.36",
+    "rating": 5.9,
+    "publisher": 23,
+    "pubdate": "2000-09-03",
+    "authors": [
+      29,
+      32
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 29,
+  "fields": {
+    "name": "Joshua",
+    "pages": 189,
+    "price": "8.87",
+    "rating": 4.8,
+    "publisher": 27,
+    "pubdate": "2019-06-16",
+    "authors": [
+      21,
+      33
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 30,
+  "fields": {
+    "name": "Kimberly",
+    "pages": 482,
+    "price": "5.68",
+    "rating": 9.9,
+    "publisher": 27,
+    "pubdate": "1978-08-25",
+    "authors": [
+      12,
+      21
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 31,
+  "fields": {
+    "name": "Peggy",
+    "pages": 215,
+    "price": "3.10",
+    "rating": 2.5,
+    "publisher": 23,
+    "pubdate": "1975-01-08",
+    "authors": [
+      2,
+      26
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 32,
+  "fields": {
+    "name": "Morgan",
+    "pages": 452,
+    "price": "7.50",
+    "rating": 8.2,
+    "publisher": 29,
+    "pubdate": "1998-02-14",
+    "authors": [
+      25,
+      28
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 33,
+  "fields": {
+    "name": "Donald",
+    "pages": 316,
+    "price": "4.46",
+    "rating": 9.8,
+    "publisher": 24,
+    "pubdate": "2019-10-11",
+    "authors": [
+      4,
+      10
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 34,
+  "fields": {
+    "name": "Carrie",
+    "pages": 336,
+    "price": "8.20",
+    "rating": 9.3,
+    "publisher": 8,
+    "pubdate": "1991-09-21",
+    "authors": [
+      2,
+      20
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.book",
+  "pk": 35,
+  "fields": {
+    "name": "Robert",
+    "pages": 412,
+    "price": "3.47",
+    "rating": 7.8,
+    "publisher": 29,
+    "pubdate": "2005-07-28",
+    "authors": [
+      4,
+      17
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 1,
+  "fields": {
+    "name": "Secured dedicated extranet",
+    "books": [
+      5,
+      7,
+      23
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 2,
+  "fields": {
+    "name": "Public-key dedicated definition",
+    "books": [
+      3,
+      10,
+      30
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 3,
+  "fields": {
+    "name": "Phased object-oriented adapter",
+    "books": [
+      2,
+      3,
+      14
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 4,
+  "fields": {
+    "name": "Persevering upward-trending approach",
+    "books": [
+      4,
+      18
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 5,
+  "fields": {
+    "name": "Synergistic modular standardization",
+    "books": [
+      5,
+      29,
+      30
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 6,
+  "fields": {
+    "name": "Expanded multi-state installation",
+    "books": [
+      17,
+      30
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 7,
+  "fields": {
+    "name": "Operative empowering task-force",
+    "books": [
+      1,
+      6
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 8,
+  "fields": {
+    "name": "Profit-focused bandwidth-monitored challenge",
+    "books": [
+      4,
+      7
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 9,
+  "fields": {
+    "name": "Decentralized asynchronous hardware",
+    "books": [
+      11,
+      27
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 10,
+  "fields": {
+    "name": "Organized mobile utilization",
+    "books": [
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 11,
+  "fields": {
+    "name": "Realigned maximized initiative",
+    "books": [
+      5,
+      27
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 12,
+  "fields": {
+    "name": "Implemented clear-thinking help-desk",
+    "books": [
+      7,
+      19
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 13,
+  "fields": {
+    "name": "Focused impactful interface",
+    "books": [
+      3,
+      9
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 14,
+  "fields": {
+    "name": "Polarized executive budgetary management",
+    "books": [
+      8,
+      23
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 15,
+  "fields": {
+    "name": "Versatile explicit budgetary management",
+    "books": [
+      12,
+      19
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 16,
+  "fields": {
+    "name": "Team-oriented tertiary circuit",
+    "books": [
+      11,
+      19
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 17,
+  "fields": {
+    "name": "Triple-buffered asymmetric collaboration",
+    "books": [
+      9,
+      22
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 18,
+  "fields": {
+    "name": "Down-sized cohesive intranet",
+    "books": [
+      7,
+      24
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 19,
+  "fields": {
+    "name": "Up-sized exuding Local Area Network",
+    "books": [
+      9,
+      10
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 20,
+  "fields": {
+    "name": "Operative modular throughput",
+    "books": [
+      11,
+      13
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 21,
+  "fields": {
+    "name": "Polarized hybrid knowledge user",
+    "books": [
+      3,
+      23
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 22,
+  "fields": {
+    "name": "Synchronized regional adapter",
+    "books": [
+      7,
+      35
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 23,
+  "fields": {
+    "name": "Configurable eco-centric Internet solution",
+    "books": [
+      17,
+      18
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 24,
+  "fields": {
+    "name": "Re-contextualized homogeneous encoding",
+    "books": [
+      21,
+      28
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 25,
+  "fields": {
+    "name": "Business-focused reciprocal Local Area Network",
+    "books": [
+      16,
+      24
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 26,
+  "fields": {
+    "name": "Multi-layered global hardware",
+    "books": [
+      5,
+      29
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 27,
+  "fields": {
+    "name": "Intuitive high-level process improvement",
+    "books": [
+      25,
+      27
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 28,
+  "fields": {
+    "name": "De-engineered logistical complexity",
+    "books": [
+      1,
+      16
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 29,
+  "fields": {
+    "name": "Public-key optimizing core",
+    "books": [
+      17,
+      30
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 30,
+  "fields": {
+    "name": "Optimized non-volatile portal",
+    "books": [
+      2,
+      15
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 31,
+  "fields": {
+    "name": "Exclusive neutral product",
+    "books": [
+      10,
+      34
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 32,
+  "fields": {
+    "name": "Devolved secondary adapter",
+    "books": [
+      24,
+      25
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 33,
+  "fields": {
+    "name": "Persevering 5thgeneration artificial intelligence",
+    "books": [
+      7,
+      24
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 34,
+  "fields": {
+    "name": "Public-key clear-thinking workforce",
+    "books": [
+      16,
+      23
+    ]
+  }
+},
+{
+  "model": "annotate_aggregate.store",
+  "pk": 35,
+  "fields": {
+    "name": "Diverse 4thgeneration website",
+    "books": [
+      4,
+      21
+    ]
+  }
+}
+]
