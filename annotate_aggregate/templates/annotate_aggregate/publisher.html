@@ -7,11 +7,9 @@
 <body>
 {% if publish %}
     <ul>
-    {% for b in publish %}
-        <h1>{{b.publisher.name}}</h1>
-    {% endfor %}
-    {% for i in publish %}
-        <li><a href="{% url 'annotate_aggregate:book' i.id %}">Book - {{ i.name }}</a></li>
+        <h1> {{ publish.name }}</h1>
+    {% for b in books %}
+            <li><a href="{% url 'annotate_aggregate:book' b.id %}">Book - {{ b.name }}</a></li>
     {% endfor %}
     </ul>
 {% else %}

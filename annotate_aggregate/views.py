@@ -19,9 +19,12 @@ def book(request, pk):
 
 
 def publisher(request, pk):
-    publish = Book.objects.select_related('publisher').filter(publisher__id=pk)
-    return render(request, 'annotate_aggregate/publisher.html', {'publish': publish})
+    publish = get_object_or_404(Publisher, pk=pk)
+    books = publish.book_set.all()
+    return render(request, 'annotate_aggregate/publisher.html', {'publish': publish, 'books': books})
 
 
 def author(request, pk):
-    authorr =
+    authors = get_object_or_404(Author, pk=pk)
+    books = authors.book_set.all()
+    return render(request, 'annotate_aggregate/authors.html', {'books': books, 'authors': authors})
