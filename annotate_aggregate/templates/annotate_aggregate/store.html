@@ -5,6 +5,9 @@
     <title>Store</title>
 </head>
 <body>
+<li><a href="{% url 'annotate_aggregate:authors'%}">To all Authors </a></li>
+<li><a href="{% url 'annotate_aggregate:book'%}">To all Books </a></li>
+<li><a href="{% url 'annotate_aggregate:publisher'%}">To all publisher </a></li>
 <h1>STORE</h1>
 {% if store_list %}
     <ul>

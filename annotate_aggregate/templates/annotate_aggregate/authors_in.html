@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Authors info</title>
 </head>
 <body>
-{% if books %}
+<li><a href="{% url 'annotate_aggregate:authors'%}">Back to all Authors </a></li>
+<li><a href="{% url 'annotate_aggregate:store'%}">To all Store </a></li>
+<li><a href="{% url 'annotate_aggregate:book'%}">To all Books </a></li>
+<li><a href="{% url 'annotate_aggregate:publisher'%}">To all publisher </a></li>
     <ul>
       <p>Decimal price - {{avg}}</p>
     {% for i in books %}
@@ -14,7 +17,7 @@
         <p>Price - {{i.price}}</p>
         <p>Rating - {{i.rating}}</p>
         <p>Pages - {{i.pages}}</p>
-        <p><a href="{% url 'annotate_aggregate:authors_in' i.publisher.id %}">Publisher - {{ i.publisher.name }}</a></p>
+        <p><a href="{% url 'annotate_aggregate:publisher_in' i.publisher.id %}">Publisher - {{ i.publisher.name }}</a></p>
     {% endfor %}
     </ul>
 {% else %}

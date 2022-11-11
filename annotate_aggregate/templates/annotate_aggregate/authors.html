@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Authors</title>
 </head>
 <body>
+<li><a href="{% url 'annotate_aggregate:store'%}">To all Store </a></li>
+<li><a href="{% url 'annotate_aggregate:book'%}">To all Books </a></li>
+<li><a href="{% url 'annotate_aggregate:publisher'%}">To all publisher </a></li>
 {% if author %}
     <ul>
     {% for i in author %}

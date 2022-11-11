@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Publisher info</title>
 </head>
 <body>
+<li><a href="{% url 'annotate_aggregate:publisher'%}">Back to all Books </a></li>
+<li><a href="{% url 'annotate_aggregate:book'%}">To all Books </a></li>
+<li><a href="{% url 'annotate_aggregate:authors'%}">To all Authors </a></li>
+<li><a href="{% url 'annotate_aggregate:store'%}">To all Store </a></li>
 {% if books %}
     <ul>
       <h2>Publisher name:</h2>
