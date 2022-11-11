@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from annotate_aggregate.models import Author, Store, Publisher, Book
+from annotate_aggregate.models import Author, Store, Book
 
 from faker import Faker
 
@@ -11,8 +11,7 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument('id', nargs='?', type=int, help="To create random connections in the database,"
-                                                            " enter 'connections'"
-)
+                                                            " enter 'connections'")
 
     def handle(self, *args, **kwargs):
         if Store.objects.all().count() or Book.objects.all().count():
