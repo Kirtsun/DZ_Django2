@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if books %}
+    <ul>
+    {% for i in books %}
+        <li><p>Book: <a href="{% url 'annotate_aggregate:book_in' i.id %}"> {{ i.name }}</a></p></li>
+        <p>Rating: {{i.rating}}</p>
+        <p>Price: {{i.price}}</p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No book are available.</p>
+{% endif %}
+</body>
+</html>

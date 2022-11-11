@@ -1,30 +1,43 @@
 from django.shortcuts import get_object_or_404, render
-
+from django.db.models import Avg, Count
 from .models import Author, Publisher, Book, Store
 
 
-def index(request):
-    store_list = Store.objects.all()
-    return render(request, 'annotate_aggregate/index.html', {'store_list': store_list})
+def store(request):
+    store_list = Store.objects.prefetch_related('books').all()
+    return render(request, 'annotate_aggregate/store.html', {'store_list': store_list})
 
 
-def store_book(request, pk):
-    book_store = Store.objects.prefetch_related('books').filter(pk=pk)
-    return render(request, 'annotate_aggregate/store.html', {'book_store': book_store})
-
-
-def book(request, pk):
+def store_in(request, pk):
     books = Book.objects.select_related('publisher').prefetch_related('authors').filter(pk=pk)
-    return render(request, 'annotate_aggregate/book.html', {'books': books})
+    return render(request, 'annotate_aggregate/store_in.html', {'book': books})
 
 
-def publisher(request, pk):
-    publish = get_object_or_404(Publisher, pk=pk)
-    books = publish.book_set.all()
-    return render(request, 'annotate_aggregate/publisher.html', {'publish': publish, 'books': books})
+def authors(request):
+    author = Author.objects.all()
+    return render(request, 'annotate_aggregate/authors.html', {'author': author})
 
 
-def author(request, pk):
-    authors = get_object_or_404(Author, pk=pk)
-    books = authors.book_set.all()
-    return render(request, 'annotate_aggregate/authors.html', {'books': books, 'authors': authors})
+def authors_in(request, pk):
+    author = get_object_or_404(Author, pk=pk)
+    books = author.book_set.all()
+    avg = author.book_set.aggregate(a=Avg('price'))
+    return render(request, 'annotate_aggregate/authors_in.html', {'books': books, 'avg': avg.get('a')})
+
+
+def book(request):
+    books = Book.objects.all()
+    return render(request, 'annotate_aggregate/books.html', {'books': books})
+
+
+def book_in(request, pk):
+    books = Book.objects.select_related('publisher').prefetch_related('authors').filter(pk=pk)
+    return render(request, 'annotate_aggregate/books_in.html', {'books': books})
+
+
+def publisher(request):
+    pub = Publisher.objects.annotate(a=Count('book'))
+    return render(request, 'annotate_aggregate/publisher.html', {'pub': pub})
+
+
+

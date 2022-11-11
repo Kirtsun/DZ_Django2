@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Store books</title>
+    <title>Store</title>
 </head>
 <body>
-{% if book_store %}
+<h1>STORE</h1>
+{% if store_list %}
     <ul>
-    {% for book in book_store %}
-        <h1> {{ book.name }}</h1>
-        {% for b in book.books.all %}
-            <li><a href="{% url 'annotate_aggregate:book' b.id %}">{{ b.name }}</a></li>
-            <p>Price - {{ b.price }}</p>
-            <p>Rating - {{ b.rating }}</p>
-        {% endfor %}
+        <h2>Store name: </h2>
+    {% for store in store_list %}
+        <h3>{{ store.name }}</h3>
+        <h3> Store books:</h3>
+            {% for i in store.books.all %}
+            <li><a href="{% url 'annotate_aggregate:store_in' i.id %}"> {{ i.name }} </a></li>
+                <p> Price - {{ i.price}} </p>
+            {% endfor %}
     {% endfor %}
     </ul>
 {% else %}
-    <p>No book are available.</p>
+    <p>No store are available.</p>
 {% endif %}
-
 </body>
 </html>

@@ -5,15 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-{% if publish %}
+{% if pub %}
     <ul>
-        <h1> {{ publish.name }}</h1>
-    {% for b in books %}
-            <li><a href="{% url 'annotate_aggregate:book' b.id %}">Book - {{ b.name }}</a></li>
-    {% endfor %}
+      <h2>Publisher name:</h2>
+      {% for i in pub %}
+        <li><p><a href="{% url 'annotate_aggregate:authors_in' i.id %}"> {{ i.name }}</a></p></li>
+        <p>Number of published books: {{ i.a }}</p>
+      {% endfor %}
     </ul>
 {% else %}
-    <p>No publisher are available.</p>
+  <p>No Publisher are available</p>
 {% endif %}
 </body>
 </html>
