@@ -7,7 +7,7 @@
 
 ### Their connections:
 
-![](/home/kirtsun/PycharmProjects/DZ_Django2/my_project_subsystem.png)
+![](my_project_subsystem.png)
 
 
 #### To fill the database with data, I recommend using the command "createss", the maximum amount of data for one command is 20.
