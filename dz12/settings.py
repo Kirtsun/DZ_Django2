@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'annotate_aggregate',
     'mail',
 
-    "debug_toolbar",
+    'debug_toolbar',
+
+    'django_celery_results',
 ]
 
 
@@ -119,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Europe/Istanbul'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -129,9 +131,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# calery
+
+CELERY_TIMEZONE = TIME_ZONE
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_BROkER_URL = 'amqp://localhost'
