@@ -11,7 +11,7 @@ def send_mail(request):
         if form.is_valid():
             from_mail = form.cleaned_data['mail']
             text = form.cleaned_data['text']
-            subject = text
+            subject = 'Reminder'
             time = form.cleaned_data['time']
             if timezone.now() > time or time > timezone.now() + timedelta(days=2):
                 pass
