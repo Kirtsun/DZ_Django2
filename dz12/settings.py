@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django_extensions',
 
     'annotate_aggregate',
+    'mail',
 
     "debug_toolbar",
 ]
