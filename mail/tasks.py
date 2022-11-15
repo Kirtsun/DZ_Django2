@@ -7,7 +7,3 @@ from django.core.mail import send_mail as mail_
 def send_mail(subject, text, from_email):
     mail_(subject, text, from_email, ['dfs@gmail.com'], fail_silently=False)
 
-
-@shared_task()
-def add(x, y):
-    return x + y
