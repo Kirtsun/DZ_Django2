@@ -11,16 +11,16 @@ def send_mail(request):
         if form.is_valid():
             from_mail = form.cleaned_data['mail']
             text = form.cleaned_data['text']
+            subject = text
             time = form.cleaned_data['time']
             a = timezone.now()
             a1 = timezone.now() + timedelta(days=2)
             if a > time or time > a1:
-                print('er', a, time, a1)
+                pass
             else:
                 time = time - a
-                mail_send_mail.apply_async((from_mail, text), countdown=time.seconds)
+                mail_send_mail.apply_async((subject, from_mail, text), countdown=time.seconds)
             return redirect('mail:send_mail')
     else:
         form = MailForm()
     return render(request, 'mail/send_mail.html', {'form': form})
-
