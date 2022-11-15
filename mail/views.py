@@ -13,12 +13,10 @@ def send_mail(request):
             text = form.cleaned_data['text']
             subject = text
             time = form.cleaned_data['time']
-            a = timezone.now()
-            a1 = timezone.now() + timedelta(days=2)
-            if a > time or time > a1:
+            if timezone.now() > time or time > timezone.now() + timedelta(days=2):
                 pass
             else:
-                time = time - a
+                time = time - timezone.now()
                 mail_send_mail.apply_async((subject, from_mail, text), countdown=time.seconds)
             return redirect('mail:send_mail')
     else:
