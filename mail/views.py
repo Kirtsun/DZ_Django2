@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.utils import timezone
 from .forms import Mail
 from .tasks import send_mail as mail_send_mail
 
