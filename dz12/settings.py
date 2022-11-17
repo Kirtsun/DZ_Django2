@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'mail',
 
     'debug_toolbar',
-
 ]
 
 
