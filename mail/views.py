@@ -13,7 +13,7 @@ def send_mail(request):
             subject = 'Reminder'
             time = form.cleaned_data['time']
             print(timezone.now(), time)
-            mail_send_mail.apply_async((subject, from_mail, text), ete=time)
+            mail_send_mail.apply_async((subject, from_mail, text), eta=time)
             return redirect('mail:send_mail')
     else:
         form = Mail()
