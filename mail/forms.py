@@ -14,5 +14,3 @@ class Mail(forms.Form):
         if timezone.now() > time or time > timezone.now() + timedelta(days=2):
             raise ValidationError('The date cannot be in the past or two days ahead')
         return time
-
-
