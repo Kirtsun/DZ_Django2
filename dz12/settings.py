@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'mail',
 
     'debug_toolbar',
+
+    'django_celery_results',
 ]
 
 
@@ -145,4 +147,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CELERY_TIMEZONE = TIME_ZONE
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
+CELERY_RESULT_BACKEND = 'django-db'
 CELERY_BROKER_URL = 'amqp://localhost'
