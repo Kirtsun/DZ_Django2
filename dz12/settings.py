@@ -43,10 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'django_extensions',
-
     'annotate_aggregate',
     'mail',
-
+    'pars.apps.ParsConfig',
     'debug_toolbar',
 
     'django_celery_results',
