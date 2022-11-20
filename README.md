@@ -16,3 +16,7 @@
 ## Update dated 11/16/2022.
 
 #### A new "mail" application in which "Celery" is implemented
+
+## Update dated 11/20/2022.
+
+#### A new "pars" application in which "Celery beat"
