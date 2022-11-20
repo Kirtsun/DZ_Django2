@@ -155,5 +155,5 @@ CELERY_BROKER_URL = 'amqp://localhost'
 CELERY_BEAT_SCHEDULE = {
     'parsing': {
         'task': 'pars.tasks.pars',
-        'schedule': crontab(minute='*/1')}
+        'schedule': crontab(hour='1*23/2')}
     }
