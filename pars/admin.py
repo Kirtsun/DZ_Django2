@@ -8,11 +8,6 @@ class QuoteInLine(admin.TabularInline):
     extra = 3
 
 
-# class AuthorInLine(admin.TabularInline):
-#     model = Quote
-#     extra = 3
-
-
 @admin.register(Author)
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ("name",)

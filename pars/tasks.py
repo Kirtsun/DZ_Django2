@@ -12,7 +12,7 @@ def send_mail(subject, text, to_email):
 
 
 @shared_task()
-def foo():
+def pars():
     max_page = 15
     count = 0
     url = "https://quotes.toscrape.com/page/1"
@@ -39,5 +39,5 @@ def foo():
                     flag = False
                     break
     if count < 5:
-        send_mail(subject='оповещение', text='quotes is finish', to_email='Oleg@gmail.com')
+        send_mail(subject='Quote', text='Quotes are over', to_email='Oleg@gmail.com')
 
