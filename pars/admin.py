@@ -33,7 +33,6 @@ class QuoteAdmin(admin.ModelAdmin):
         (None, {'fields': ['quote']}),
         ('Authors', {'fields': ['author']})
     ]
-    # inlines = [QuoteInLine]
     list_filter = ['author']
     search_fields = ['quote']
     list_per_page = 20
