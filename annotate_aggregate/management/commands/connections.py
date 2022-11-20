@@ -1,7 +1,9 @@
 import random
 
+from annotate_aggregate.models import Author, Book, Store
+
 from django.core.management.base import BaseCommand
-from annotate_aggregate.models import Author, Store, Book
+
 
 from faker import Faker
 
@@ -9,7 +11,7 @@ fake = Faker()
 
 
 class Command(BaseCommand):
-    help = "Create random connections"
+    helps = "Create random connections"
 
     def add_arguments(self, parser):
         parser.add_argument('id', nargs='?', type=int, help="To create random connections in the database,"

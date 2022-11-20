@@ -1,9 +1,12 @@
-from celery import shared_task
-import requests
 from bs4 import BeautifulSoup
-from pars.models import Author, Quote
+
+from celery import shared_task
 
 from django.core.mail import send_mail as mail_
+
+from pars.models import Author, Quote
+
+import requests
 
 
 @shared_task()
@@ -40,4 +43,3 @@ def pars():
                     break
     if count < 5:
         send_mail(subject='Quote', text='Quotes are over', to_email='Oleg@gmail.com')
-

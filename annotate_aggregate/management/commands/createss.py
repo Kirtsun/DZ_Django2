@@ -1,6 +1,8 @@
-from django.core.management.base import BaseCommand
-from annotate_aggregate.models import Author, Store, Publisher, Book
 import random
+
+from annotate_aggregate.models import Author, Book, Publisher, Store
+
+from django.core.management.base import BaseCommand
 
 from faker import Faker
 

@@ -1,6 +1,8 @@
-from django.shortcuts import get_object_or_404, render
 from django.db.models import Avg, Count
-from .models import Author, Publisher, Book, Store
+from django.shortcuts import get_object_or_404, render
+
+
+from .models import Author, Book, Publisher, Store
 
 
 def store(request):
