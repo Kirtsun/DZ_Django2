@@ -152,6 +152,6 @@ CELERY_RESULT_BACKEND = 'django-db'
 CELERY_BROKER_URL = 'amqp://localhost'
 CELERY_BEAT_SCHEDULE = {
     'parsing': {
-        'task': 'pars.tasks.foo',
+        'task': 'pars.tasks.pars',
         'schedule': crontab(hour='1-23/2', minute='0')}
     }
