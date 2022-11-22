@@ -6,7 +6,6 @@
 </head>
 <body>
 <li><a href="{% url 'annotate_aggregate:publisher-list' %}">Back to Publisher list</a></li>
-{% block content %}
   <h1>Publisher name: {{ publisher.name }}</h1>
     {% if publisher.book_set.all %}
         <ul>
@@ -19,6 +18,6 @@
     {% else %}
     <p>The publisher has no books</p>
     {% endif %}
-{% endblock %}
+<li><a href="{% url 'annotate_aggregate:publisher-update' publisher.id %}">Publisher update</a></li>
 </body>
 </html>

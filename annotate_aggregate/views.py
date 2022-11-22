@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404, render
 
 from .models import Author, Book, Publisher, Store
 from django.views import generic
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 
 
@@ -75,5 +75,14 @@ class PublisherCreate(generic.CreateView):
 class PublisherUpdate(generic.UpdateView):
     model = Publisher
     fields = ['name']
-    template_name = 'publisher_update'
+    template_name = 'annotate_aggregate/publisher_update.html'
+
+    def get_success_url(self):
+        return reverse('annotate_aggregate:publisher-detail', kwargs={'pk': self.object.id})
+
+
+class PublisherDelete(generic.DeleteView):
+    model = Publisher
+    template_name = 'annotate_aggregate/publisher_delete.html'
+    success_url = reverse_lazy('publisher-list')
 
