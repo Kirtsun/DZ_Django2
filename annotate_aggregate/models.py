@@ -26,7 +26,7 @@ class Book(models.Model):
     pubdate = models.DateField()
 
     def __str__(self):
-        return f"{self.name}, {self.pages}, {self.price}, {self.pubdate}, {self.rating}, {self.publisher}"
+        return f"{self.name}, {self.publisher}"
 
 
 class Store(models.Model):

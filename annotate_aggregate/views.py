@@ -3,6 +3,9 @@ from django.shortcuts import get_object_or_404, render
 
 
 from .models import Author, Book, Publisher, Store
+from django.views import generic
+from django.urls import reverse
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 
 
 def store(request):
@@ -37,12 +40,40 @@ def book_in(request, pk):
     return render(request, 'annotate_aggregate/books_in.html', {'books': books})
 
 
-def publisher(request):
-    pub = Publisher.objects.annotate(a=Count('book'))
-    return render(request, 'annotate_aggregate/publisher.html', {'pub': pub})
+# def publisher(request):
+#     pub = Publisher.objects.annotate(a=Count('book'))
+#     return render(request, 'annotate_aggregate/publisher.html', {'pub': pub})
+#
+#
+# def publisher_in(request, pk):
+#     pub = get_object_or_404(Publisher, pk=pk)
+#     books = pub.book_set.all()
+#     return render(request, 'annotate_aggregate/publisher_in.html', {'books': books, 'pub': pub})
 
 
-def publisher_in(request, pk):
-    pub = get_object_or_404(Publisher, pk=pk)
-    books = pub.book_set.all()
-    return render(request, 'annotate_aggregate/publisher_in.html', {'books': books, 'pub': pub})
+class PublisherList(generic.ListView):
+    model = Publisher
+    paginate_by = 5
+    template_name = 'annotate_aggregate/publisher_list.html'
+
+
+class PublisherDetail(generic.DetailView):
+    model = Publisher
+    template_name = 'annotate_aggregate/publisher_detail.html'
+
+
+class PublisherCreate(generic.CreateView):
+    model = Publisher
+    fields = ['name']
+    # success_url = reverse_lazy("publishers")
+    template_name = 'annotate_aggregate/publisher_create.html'
+
+    def get_success_url(self):
+        return reverse('annotate_aggregate:publisher-detail', kwargs={'pk': self.object.id})
+
+
+class PublisherUpdate(generic.UpdateView):
+    model = Publisher
+    fields = ['name']
+    template_name = 'publisher_update'
+
