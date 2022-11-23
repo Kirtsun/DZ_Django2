@@ -45,9 +45,21 @@ class PublisherList(generic.ListView):
     template_name = 'annotate_aggregate/publisher_list.html'
 
 
+class BookList(generic.ListView):
+    model = Book
+    paginate_by = 7
+    template_name = 'annotate_aggregate/book_list.html'
+
+
 class PublisherDetail(generic.DetailView):
     model = Publisher
     template_name = 'annotate_aggregate/publisher_detail.html'
+
+
+class BookDetail(generic.DetailView):
+    model = Book
+    queryset = Book.objects.select_related('publisher').prefetch_related('authors')
+    template_name = 'annotate_aggregate/book_detail.html'
 
 
 class PublisherCreate(LoginRequiredMixin, generic.CreateView):

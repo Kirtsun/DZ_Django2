@@ -13,7 +13,11 @@ urlpatterns = [
     path('book/info/<int:pk>/', views.book_in, name='book_in'),
 
     path('publishers/', views.PublisherList.as_view(), name='publisher-list'),
+    path('books/', views.BookList.as_view(), name='books'),
+
     path('publisher/<int:pk>/', views.PublisherDetail.as_view(), name='publisher-detail'),
+    path('book/<int:pk>/', views.BookDetail.as_view(), name='book-detail'),
+
     path('publisher/create/', views.PublisherCreate.as_view(), name='publisher-create'),
     path('publisher/<int:pk>/update/', views.PublisherUpdate.as_view(), name='publisher-update'),
     path('publisher/<int:pk>/delete', views.PublisherDelete.as_view(), name='publisher-delete'),
