@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<a href="{% url 'annotate_aggregate:books-list' %}">Back to All Book</a>
+<h1>Book title: {{ book_list.name }}</h1>
+    {% if book_list %}
+        <ul>
+            <p>Price - {{book_list.price}}</p>
+            <p>Rating - {{book_list.rating}}</p>
+            <p> Pages - {{book_list.pages}}</p>
+            <p> Pup date - {{book_list.pubdate}}</p>
+            <p>Authors: {{ book_list.authors.all|join:", " }}.</p>
+            <p>Publisher: <a href="{% url 'annotate_aggregate:publisher-detail' book_list.publisher.id%}">{{book_list.publisher}}</a></p>
+        </ul>
+    {% else %}
+    <p>No book</p>
+    {% endif %}
+<li><a href="{% url 'annotate_aggregate:book-update' book_list.id %}">Book update</a></li>
+<li><a href="{% url 'annotate_aggregate:book-delete' book_list.id %}">Book delete</a></li>
+</body>
+</html>
