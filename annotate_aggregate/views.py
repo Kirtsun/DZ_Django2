@@ -29,16 +29,6 @@ def authors_in(request, pk):
     return render(request, 'annotate_aggregate/authors_in.html', {'books': books, 'avg': avg.get('a')})
 
 
-def book(request):
-    books = Book.objects.all()
-    return render(request, 'annotate_aggregate/books.html', {'books': books})
-
-
-def book_in(request, pk):
-    books = Book.objects.select_related('publisher').prefetch_related('authors').filter(pk=pk)
-    return render(request, 'annotate_aggregate/books_in.html', {'books': books})
-
-
 class PublisherList(generic.ListView):
     model = Publisher
     paginate_by = 5
@@ -58,7 +48,7 @@ class PublisherDetail(generic.DetailView):
 
 class BookDetail(generic.DetailView):
     model = Book
-    queryset = Book.objects.select_related('publisher').prefetch_related('authors')
+    context_object_name = 'book_list'
     template_name = 'annotate_aggregate/book_detail.html'
 
 
@@ -71,6 +61,15 @@ class PublisherCreate(LoginRequiredMixin, generic.CreateView):
         return reverse('annotate_aggregate:publisher-detail', kwargs={'pk': self.object.id})
 
 
+class BookCreate(LoginRequiredMixin, generic.CreateView):
+    model = Book
+    fields = ['name', 'pages', 'rating', 'price', 'authors', 'publisher', 'pubdate']
+    template_name = 'annotate_aggregate/book_create.html'
+
+    def get_success_url(self):
+        return reverse('annotate_aggregate:book-detail', kwargs={'pk': self.object.id})
+
+
 class PublisherUpdate(LoginRequiredMixin, generic.UpdateView):
     model = Publisher
     fields = ['name']
@@ -80,7 +79,28 @@ class PublisherUpdate(LoginRequiredMixin, generic.UpdateView):
         return reverse('annotate_aggregate:publisher-detail', kwargs={'pk': self.object.id})
 
 
+class BookUpdate(LoginRequiredMixin, generic.UpdateView):
+    model = Book
+    fields = ['name', 'pages', 'rating', 'price', 'authors', 'publisher', 'pubdate']
+    template_name = 'annotate_aggregate/book_update.html'
+
+    def get_success_url(self):
+        return reverse('annotate_aggregate:book-detail', kwargs={'pk': self.object.id})
+
+
 class PublisherDelete(LoginRequiredMixin, generic.DeleteView):
     model = Publisher
     template_name = 'annotate_aggregate/publisher_delete.html'
     success_url = reverse_lazy('publisher-list')
+
+    def get_success_url(self):
+        return reverse('annotate_aggregate:publisher-list')
+
+
+class BookDelete(generic.DeleteView):
+    model = Book
+    template_name = 'annotate_aggregate/book_delete.html'
+    success_url = reverse_lazy('books-list')
+
+    def get_success_url(self):
+        return reverse('annotate_aggregate:books-list')
