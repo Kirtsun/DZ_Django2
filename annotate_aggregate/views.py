@@ -97,7 +97,7 @@ class PublisherDelete(LoginRequiredMixin, generic.DeleteView):
         return reverse('annotate_aggregate:publisher-list')
 
 
-class BookDelete(generic.DeleteView):
+class BookDelete(LoginRequiredMixin, generic.DeleteView):
     model = Book
     template_name = 'annotate_aggregate/book_delete.html'
     success_url = reverse_lazy('books-list')
