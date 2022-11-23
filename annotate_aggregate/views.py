@@ -1,6 +1,8 @@
-from django.db.models import Avg, Count
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Avg
 from django.shortcuts import get_object_or_404, render
-
+from django.urls import reverse, reverse_lazy
+from django.views import generic
 
 from .models import Author, Book, Publisher, Store
 
@@ -37,12 +39,36 @@ def book_in(request, pk):
     return render(request, 'annotate_aggregate/books_in.html', {'books': books})
 
 
-def publisher(request):
-    pub = Publisher.objects.annotate(a=Count('book'))
-    return render(request, 'annotate_aggregate/publisher.html', {'pub': pub})
+class PublisherList(generic.ListView):
+    model = Publisher
+    paginate_by = 5
+    template_name = 'annotate_aggregate/publisher_list.html'
 
 
-def publisher_in(request, pk):
-    pub = get_object_or_404(Publisher, pk=pk)
-    books = pub.book_set.all()
-    return render(request, 'annotate_aggregate/publisher_in.html', {'books': books, 'pub': pub})
+class PublisherDetail(generic.DetailView):
+    model = Publisher
+    template_name = 'annotate_aggregate/publisher_detail.html'
+
+
+class PublisherCreate(LoginRequiredMixin, generic.CreateView):
+    model = Publisher
+    fields = ['name']
+    template_name = 'annotate_aggregate/publisher_create.html'
+
+    def get_success_url(self):
+        return reverse('annotate_aggregate:publisher-detail', kwargs={'pk': self.object.id})
+
+
+class PublisherUpdate(LoginRequiredMixin, generic.UpdateView):
+    model = Publisher
+    fields = ['name']
+    template_name = 'annotate_aggregate/publisher_update.html'
+
+    def get_success_url(self):
+        return reverse('annotate_aggregate:publisher-detail', kwargs={'pk': self.object.id})
+
+
+class PublisherDelete(LoginRequiredMixin, generic.DeleteView):
+    model = Publisher
+    template_name = 'annotate_aggregate/publisher_delete.html'
+    success_url = reverse_lazy('publisher-list')
