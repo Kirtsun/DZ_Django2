@@ -19,4 +19,9 @@
 
 ## Update dated 11/20/2022.
 
-#### A new "pars" application in which "Celery beat"
+#### A new "pars" application in which "Celery beat".
+
+
+## Update dated 11/23/2022.
+
+#### Updates in the annotate_aggregate application. Changed views from functions to class based views
