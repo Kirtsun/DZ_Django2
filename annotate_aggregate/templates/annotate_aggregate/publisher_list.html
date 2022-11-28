@@ -10,6 +10,7 @@
     <ul>
         {% for publisher in object_list %}
             <li><a href="{% url 'annotate_aggregate:publisher-detail' publisher.id %}">{{ publisher.name }}</a></li>
+            <p>The number of published books {{publisher.num_books}}</p>
         {% endfor %}
     </ul>
 
@@ -22,5 +23,9 @@
             <a href="?page={{ page_obj.next_page_number }}">Next</a>&nbsp;
             <a href="?page={{ page_obj.paginator.num_pages }}">Last page</a>
         {% endif %}
+<form action="." method="get">
+    <label>Page number<input type="text" name="page"></label>
+    <input type="submit">
+</form>
 </body>
 </html>

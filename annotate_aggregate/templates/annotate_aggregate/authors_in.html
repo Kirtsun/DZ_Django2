@@ -7,8 +7,8 @@
 <body>
 <li><a href="{% url 'annotate_aggregate:authors'%}">Back to all Authors </a></li>
 <li><a href="{% url 'annotate_aggregate:store'%}">To all Store </a></li>
-<li><a href="{% url 'annotate_aggregate:book'%}">To all Books </a></li>
-<li><a href="{% url 'annotate_aggregate:publisher'%}">To all publisher </a></li>
+<li><a href="{% url 'annotate_aggregate:books-list'%}">To all Books </a></li>
+<li><a href="{% url 'annotate_aggregate:publisher-list'%}">To all publisher </a></li>
 {% if books %}
 
     <ul>
@@ -19,7 +19,7 @@
         <p>Price - {{i.price}}</p>
         <p>Rating - {{i.rating}}</p>
         <p>Pages - {{i.pages}}</p>
-        <p><a href="{% url 'annotate_aggregate:publisher_in' i.publisher.id %}">Publisher - {{ i.publisher.name }}</a></p>
+        <p><a href="{% url 'annotate_aggregate:publisher-detail' i.publisher.id %}">Publisher - {{ i.publisher.name }}</a></p>
     {% endfor %}
     </ul>
 {% else %}
