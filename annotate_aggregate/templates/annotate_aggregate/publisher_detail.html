@@ -7,9 +7,9 @@
 <body>
 <li><a href="{% url 'annotate_aggregate:publisher-list' %}">Back to Publisher list</a></li>
   <h1>Publisher name: {{ publisher.name }}</h1>
-    {% if publisher.book_set.all %}
+    {% if pub_list.book_set.all %}
         <ul>
-        {% for pub in publisher.book_set.all %}
+        {% for pub in pub_list.book_set.all %}
             <li>Book:<a href="{% url 'annotate_aggregate:book-detail' pub.id %}">{{pub.name}}</a></li></li>
             <p>Rating - {{pub.rating}}</p>
         {% endfor %}
@@ -17,7 +17,7 @@
     {% else %}
     <p>The publisher has no books</p>
     {% endif %}
-<li><a href="{% url 'annotate_aggregate:publisher-update' publisher.id %}">Publisher update</a></li>
-<li><a href="{% url 'annotate_aggregate:publisher-delete' publisher.id %}">Publisher delete</a></li>
+<li><a href="{% url 'annotate_aggregate:publisher-update' pub_list.id %}">Publisher update</a></li>
+<li><a href="{% url 'annotate_aggregate:publisher-delete' pub_list.id %}">Publisher delete</a></li>
 </body>
 </html>

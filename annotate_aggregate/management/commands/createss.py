@@ -13,7 +13,7 @@ class Command(BaseCommand):
     helps = "Create random Book, Author, Store, Publisher"
 
     def add_arguments(self, parser):
-        parser.add_argument('some_id', nargs='?', type=int, choices=range(1, 21), help='Enter a number from 1 to 10')
+        parser.add_argument('some_id', nargs='?', type=int, choices=range(1, 501), help='Enter a number from 1 to 500')
 
     def handle(self, *args, **kwargs):
         objs_author = []

@@ -6,17 +6,39 @@
 </head>
 <body>
 <li><a href="{% url 'annotate_aggregate:store'%}">To all Store </a></li>
-<li><a href="{% url 'annotate_aggregate:book'%}">To all Books </a></li>
-<li><a href="{% url 'annotate_aggregate:publisher'%}">To all publisher </a></li>
-{% if author %}
+<li><a href="{% url 'annotate_aggregate:books-list'%}">To all Books </a></li>
+<li><a href="{% url 'annotate_aggregate:publisher-list'%}">To all publisher </a></li>
+{% if page_obj %}
     <ul>
-    {% for i in author %}
+    {% for i in page_obj %}
         <h3>Authors:</h3>
         <p><a href="{% url 'annotate_aggregate:authors_in' i.id %}"> {{ i.name }}</a><br> Age {{i.age}}</p>
+        <p>Number of books: {{i.num}}</p>
     {% endfor %}
     </ul>
 {% else %}
     <p>No author are available.</p>
 {% endif %}
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+<form action="." method="get">
+    <label>Page number<input type="text" name="page"></label>
+    <input type="submit">
+</form>
 </body>
 </html>
