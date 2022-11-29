@@ -12,6 +12,9 @@ from .models import Author, Book, Publisher, Store
 
 def store(request):
     store_list = Store.objects.prefetch_related('books').all()
+    paginator = Paginator(store_list, 5)
+    page_number = request.GET.get('page')
+    store_list = paginator.get_page(page_number)
     return render(request, 'annotate_aggregate/store.html', {'store_list': store_list})
 
 
