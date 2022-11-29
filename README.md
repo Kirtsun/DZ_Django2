@@ -25,3 +25,17 @@
 ## Update dated 11/23/2022.
 
 #### Updates in the annotate_aggregate application. Changed views from functions to class based views
+
+
+## Update dated 11/29/2022.
+
+#### Caching has been added to some views where it is "most necessary". 
+#### Views with caching:
+- store_in
+- authors
+- authors_in
+- PublisherList
+- PublisherDetail
+- BookList
+- BookDetail
+#### Also added fixtures for models of the annotate_aggregate application for a quick start

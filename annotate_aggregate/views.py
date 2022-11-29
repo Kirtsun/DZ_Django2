@@ -46,6 +46,7 @@ class PublisherList(generic.ListView):
     queryset = Publisher.objects.annotate(num_books=Count('book'))
 
 
+@method_decorator(cache_page(10), name='dispatch')
 class BookList(generic.ListView):
     model = Book
     paginate_by = 100
@@ -59,6 +60,7 @@ class PublisherDetail(generic.DetailView):
     template_name = 'annotate_aggregate/publisher_detail.html'
 
 
+@method_decorator(cache_page(10), name='dispatch')
 class BookDetail(generic.DetailView):
     model = Book
     context_object_name = 'book_list'
