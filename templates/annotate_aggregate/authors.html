@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Authors</title>
-</head>
-<body>
-<li><a href="{% url 'annotate_aggregate:store'%}">To all Store </a></li>
-<li><a href="{% url 'annotate_aggregate:books-list'%}">To all Books </a></li>
-<li><a href="{% url 'annotate_aggregate:publisher-list'%}">To all publisher </a></li>
+{% extends "base.html" %}
+{% block content %}
 {% if page_obj %}
     <ul>
     {% for i in page_obj %}
         <h3>Authors:</h3>
         <p><a href="{% url 'annotate_aggregate:authors_in' i.id %}"> {{ i.name }}</a><br> Age {{i.age}}</p>
         <p>Number of books: {{i.num}}</p>
+        <hr>
     {% endfor %}
     </ul>
 {% else %}
@@ -40,5 +33,4 @@
     <label>Page number<input type="text" name="page"></label>
     <input type="submit">
 </form>
-</body>
-</html>
+{% endblock %}

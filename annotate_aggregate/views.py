@@ -1,17 +1,24 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.db.models import Avg, Count
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, render
+from django.template.loader import render_to_string
 from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views import generic
 from django.views.decorators.cache import cache_page
 
+from .forms import Mail
+from .tasks import send_mail
 from .models import Author, Book, Publisher, Store
 
 
 def store(request):
     store_list = Store.objects.prefetch_related('books').all()
+    paginator = Paginator(store_list, 5)
+    page_number = request.GET.get('page')
+    store_list = paginator.get_page(page_number)
     return render(request, 'annotate_aggregate/store.html', {'store_list': store_list})
 
 
@@ -119,3 +126,22 @@ class BookDelete(LoginRequiredMixin, generic.DeleteView):
 
     def get_success_url(self):
         return reverse('annotate_aggregate:books-list')
+
+
+def contact_form(request):
+    data = dict()
+    if request.method == "POST":
+        form = Mail(request.POST)
+        if form.is_valid():
+            data['form_is_valid'] = True
+            to_mail = form.cleaned_data['mail']
+            text = form.cleaned_data['text']
+            subject = 'Someone need your help'
+            send_mail.delay(subject, text, to_mail)
+        else:
+            data['form_is_valid'] = False
+    else:
+        form = Mail()
+    context = {'form': form}
+    data['html_form'] = render_to_string('annotate_aggregate/contact_form.html', context, request=request)
+    return JsonResponse(data)

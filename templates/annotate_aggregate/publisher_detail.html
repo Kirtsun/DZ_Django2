@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Detail</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
 <li><a href="{% url 'annotate_aggregate:publisher-list' %}">Back to Publisher list</a></li>
   <h1>Publisher name: {{ publisher.name }}</h1>
     {% if pub_list.book_set.all %}
@@ -19,5 +14,4 @@
     {% endif %}
 <li><a href="{% url 'annotate_aggregate:publisher-update' pub_list.id %}">Publisher update</a></li>
 <li><a href="{% url 'annotate_aggregate:publisher-delete' pub_list.id %}">Publisher delete</a></li>
-</body>
-</html>
+{% endblock %}

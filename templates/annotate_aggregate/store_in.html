@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Store info</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
 <a href="{% url 'annotate_aggregate:store'%}">Back to all Store </a></li>
-<li><a href="{% url 'annotate_aggregate:authors'%}">To all Authors </a></li>
-<li><a href="{% url 'annotate_aggregate:books-list'%}">To all Books </a></li>
-<li><a href="{% url 'annotate_aggregate:publisher-list'%}">To all Publisher</a></li>
 {% if book %}
     <ul>
     {% for i in book %}
@@ -26,5 +18,4 @@
 {% else %}
     <p>No book are available.</p>
 {% endif %}
-</body>
-</html>
+{% endblock %}
