@@ -10,8 +10,8 @@ from django.views import generic
 from django.views.decorators.cache import cache_page
 
 from .forms import Mail
-from .tasks import send_mail
 from .models import Author, Book, Publisher, Store
+from .tasks import send_mail
 
 
 def store(request):
