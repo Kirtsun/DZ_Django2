@@ -39,3 +39,10 @@
 - BookList
 - BookDetail
 #### Also added fixtures for models of the annotate_aggregate application for a quick start
+
+
+## Update dated 13/13/2022.
+
+
+#### 
+This update uses Bootstrap and AJAX modal.(now it is much easier to contact the administrator :) )

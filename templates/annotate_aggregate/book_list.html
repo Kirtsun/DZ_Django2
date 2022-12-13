@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>All Publisher</title>
-</head>
-<body>
-<li><a href="{% url 'annotate_aggregate:publisher-create' %}"> Create Publisher</a></li>
-    <h2>Publishers</h2>
+{% extends "base.html" %}
+{% block content %}
+<h2>Books</h2>
     <ul>
-        {% for publisher in object_list %}
-            <li><a href="{% url 'annotate_aggregate:publisher-detail' publisher.id %}">{{ publisher.name }}</a></li>
-            <p>The number of published books {{publisher.num_books}}</p>
+        {% for book in object_list %}
+            <li><a href="{% url 'annotate_aggregate:book-detail' book.id %}">{{ book.name }}</a></li>
+            <p> {{book.num_books}}</p>
         {% endfor %}
     </ul>
-
 {% if page_obj.has_previous %}
             <a href="?page=1">First page</a>&nbsp;
             <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
@@ -23,9 +16,9 @@
             <a href="?page={{ page_obj.next_page_number }}">Next</a>&nbsp;
             <a href="?page={{ page_obj.paginator.num_pages }}">Last page</a>
         {% endif %}
+
 <form action="." method="get">
     <label>Page number<input type="text" name="page"></label>
     <input type="submit">
 </form>
-</body>
-</html>
+{% endblock %}

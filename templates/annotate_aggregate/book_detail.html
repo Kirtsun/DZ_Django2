@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Detail</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
 <a href="{% url 'annotate_aggregate:books-list' %}">Back to All Book</a>
 <h1>Book title: {{ book_list.name }}</h1>
     {% if book_list %}
@@ -21,5 +16,4 @@
     {% endif %}
 <li><a href="{% url 'annotate_aggregate:book-update' book_list.id %}">Book update</a></li>
 <li><a href="{% url 'annotate_aggregate:book-delete' book_list.id %}">Book delete</a></li>
-</body>
-</html>
+{% endblock %}

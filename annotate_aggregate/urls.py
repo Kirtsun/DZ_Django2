@@ -25,4 +25,6 @@ urlpatterns = [
     path('publisher/<int:pk>/delete', views.PublisherDelete.as_view(), name='publisher-delete'),
     path('book/<int:pk>/delete/', views.BookDelete.as_view(), name='book-delete'),
 
+    path('contact_form/', views.contact_form, name='contact_form'),
+
 ]

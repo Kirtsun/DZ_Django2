@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Store</title>
-</head>
-<body>
-<li><a href="{% url 'annotate_aggregate:authors'%}">To all Authors </a></li>
-<li><a href="{% url 'annotate_aggregate:books-list'%}">To all Books </a></li>
-<li><a href="{% url 'annotate_aggregate:publisher-list'%}">To all publisher </a></li>
+{% extends "base.html" %}
+{% block content %}
 <h1>STORE</h1>
 {% if store_list %}
     <ul>
@@ -45,5 +37,4 @@
     <label>Page number<input type="text" name="page"></label>
     <input type="submit">
 </form>
-</body>
-</html>
+{% endblock %}

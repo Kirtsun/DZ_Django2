@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Create</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
   <form method="post">
     {% csrf_token %}
       {{ form.as_p }}
@@ -13,5 +8,4 @@
 <ul>
 <li><a href="{% url 'annotate_aggregate:publisher-list' %}"> Back to Publisher list</a></li>
 </ul>
-</body>
-</html>
+{% endblock %}
